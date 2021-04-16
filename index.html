@@ -7,6 +7,7 @@
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="description"
           content="Cast Pranker is a simple web app to prank your family using chromecast.">
+    <link rel="icon" href="icon.png">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -16,9 +17,16 @@
       * [x] test images
       * [x] fix gigantic text bug
       * [x] add attribution / source link
-      * [ ] paste-image feedback spinner
-      * [ ] add dark mode
-      * [ ] deploy
+      * [x] deploy
+
+      * [x] on-click image selects it
+      * [x] add dark mode
+      * [ ] image search box
+
+      * [x] favicon
+      * [x] screenshots
+
+      * [ ] trying a prank
     -->
   </head>
   <body>
@@ -43,15 +51,24 @@
   <a href="#" data-command='subscript'><i class='fa fa-subscript'></i></a>
   <a href="#" data-command='superscript'><i class='fa fa-superscript'></i></a>
   </div>
+
+  <div id="theme-switch-wrapper" class="ui">
+    <input type="checkbox" id="checkbox" />
+    <label class="theme-switch" for="checkbox">
+      <i class='fa fa-moon-o'></i>
+    </label>
+  </div>
+
   <div id='editor' contenteditable>
     <h1>Cast Pranker</h1>
     <p>Edit this text, paste images,<br/>and cast this page to prank your family!</p>
   </div>
   <div id="attribution" class="ui">
-    made with 🤖 by <a href="https://twitter.com/mccrmx">@mccrmx</a>.<br/>
-    based on a <a href="https://codepen.io/Shokeen/pen/pgryyN">codepen by Shokeen</a>.<br/>
-    palette by <a href="https://lospec.com/palette-list/minimal-red-3">Drag109</a>.<br/>
-    <a href="https://github.com/chr15m/castpranker.com">source code</a>.
+    made with 🤖 by <a href="https://twitter.com/mccrmx">@mccrmx</a>.
+    <a href="https://github.com/chr15m/castpranker.com">Source code</a>.<br/>
+    based on a <a href="https://codepen.io/Shokeen/pen/pgryyN">codepen by Shokeen</a>.
+    palette by <a href="https://lospec.com/palette-list/minimal-red-3">Drag109</a>.
+    Photo by <a href="https://unsplash.com/@neonbrand">NeONBRAND</a> on <a href="https://unsplash.com/s/photos/prank">Unsplash</a>.
   </div>
   </body>
 </html>

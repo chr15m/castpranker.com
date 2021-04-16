@@ -33,4 +33,33 @@ $(document).ready(function() {
     document.getSelection().removeAllRanges();
     document.getSelection().addRange(range);
   });
+
+  /*const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+
+  function switchTheme(e) {
+      if (e.target.checked) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+      }
+      else {
+          document.documentElement.setAttribute('data-theme', 'light');
+      }    
+  }
+
+  toggleSwitch.addEventListener('change', switchTheme, false);*/
+
+  console.log(localStorage.getItem('theme'));
+  let dark = (localStorage.getItem('theme') == "dark") ? true : false;
+
+  function updateThemeState() {
+    document.documentElement.setAttribute('data-theme', dark ? "dark" : "light");
+    $("#theme-switch-wrapper i").attr("class", "fa fa-" + (dark ? "sun-o" : "moon-o"));
+    localStorage.setItem('theme', dark ? "dark" : "light");
+  }
+
+  $("#theme-switch-wrapper i").click(function(ev) {
+    dark = !$("#theme-switch-wrapper input").is(':checked');
+    updateThemeState();
+  });
+
+  updateThemeState();
 });

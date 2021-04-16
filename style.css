@@ -9,6 +9,12 @@ html, body {
   --hi: #ed3237;
 }
 
+[data-theme="dark"] {
+  --fg: #fefefe;
+  --bg: #373435;
+  --hi: #ed3237;
+}
+
 body {
   margin: 0 auto;
   font-weight: bold;
@@ -17,6 +23,8 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: var(--bg);
+  color: var(--fg);
 }
 
 a {
@@ -57,12 +65,26 @@ body:hover .ui {
   text-align: center;
   position: fixed;
   bottom: 1em;
-  color: #555;
+  color: #888;
   line-height: 1.5em;
 }
 
 #attribution a {
   color: var(--hi);
+}
+
+#theme-switch-wrapper {
+  position: fixed;
+  top: 0.5em;
+  right: 0.5em;
+}
+
+#theme-switch-wrapper i {
+  font-size: 3em;
+}
+
+#theme-switch-wrapper input {
+  display: none;
 }
 
 .toolbar a,
