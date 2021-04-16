@@ -11,10 +11,9 @@ $(document).ready(function() {
   }
 
   $('.toolbar a').click(function(e) {
-    console.log("hi");
+    e.preventDefault();
     var command = $(this).data('command');
     if (command == 'h1' || command == 'h2' || command == 'p') {
-      console.log("one of these");
       document.execCommand('formatBlock', false, command);
     }
     if (command == 'forecolor' || command == 'backcolor') {
@@ -24,7 +23,6 @@ $(document).ready(function() {
       url = prompt('Enter the link here: ', 'http:\/\/');
       document.execCommand($(this).data('command'), false, url);
     } else {
-      console.log("hello");
       document.execCommand($(this).data('command'), false, null);
     }
   });
