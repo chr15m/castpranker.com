@@ -49,6 +49,10 @@ img {
 
 .ui {
   display: none;
+  background-color: var(--bg);
+  padding: 1em 3em;
+  border-radius: 3px;
+  opacity: 0.9;
 }
 
 body:hover .ui {
