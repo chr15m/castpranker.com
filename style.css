@@ -1,7 +1,16 @@
+html, body {
+  height: 100%;
+}
+
 body {
   margin: 0 auto;
   width: 600px;
-  font-family: 'Dosis';
+  font-weight: bold;
+  font-family: 'Arial';
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 a {
@@ -9,17 +18,17 @@ a {
 }
 
 #editor {
-  box-shadow: 0 0 2px #CCC;
+  font-size: 3em;
   min-height: 150px;
   overflow: auto;
-  padding: 1em;
-  margin-top: 20px;
   resize: vertical;
   outline: none;
 }
 
 .toolbar {
   text-align: center;
+  position: fixed;
+  top: 0.25em;
 }
 
 .toolbar a,
