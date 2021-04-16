@@ -61,16 +61,22 @@ body:hover .ui {
   top: 0.25em;
 }
 
-#attribution {
-  text-align: center;
-  position: fixed;
-  bottom: 1em;
-  color: #888;
-  line-height: 1.5em;
+#image-search {
 }
 
-#attribution a {
-  color: var(--hi);
+#image-search input {
+  font-size: 1.25em;
+  padding: 0.25em;
+  border: 1px solid #888;
+  border-radius: 3px;
+}
+
+#image-search button {
+  font-size: 1.25em;
+  padding: 0.25em 1em;
+  background-color: white;
+  border: 1px solid #888;
+  border-radius: 3px;
 }
 
 #theme-switch-wrapper {
@@ -173,4 +179,16 @@ a.palette-item:hover {
 .back-palette a {
   background: #FFF;
   margin-bottom: 2px;
+}
+
+#attribution {
+  text-align: center;
+  position: fixed;
+  bottom: 1em;
+  color: #888;
+  line-height: 1.5em;
+}
+
+#attribution a {
+  color: var(--hi);
 }

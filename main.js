@@ -34,20 +34,8 @@ $(document).ready(function() {
     document.getSelection().addRange(range);
   });
 
-  /*const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+  /*** dark mode ***/
 
-  function switchTheme(e) {
-      if (e.target.checked) {
-          document.documentElement.setAttribute('data-theme', 'dark');
-      }
-      else {
-          document.documentElement.setAttribute('data-theme', 'light');
-      }    
-  }
-
-  toggleSwitch.addEventListener('change', switchTheme, false);*/
-
-  console.log(localStorage.getItem('theme'));
   let dark = (localStorage.getItem('theme') == "dark") ? true : false;
 
   function updateThemeState() {
@@ -62,4 +50,11 @@ $(document).ready(function() {
   });
 
   updateThemeState();
+
+  /*** image search ***/
+  // https://duckduckgo.com/?q=hello&t=h_&iax=images&ia=images
+  $("#image-search button").click(function(ev) {
+    const q = $("#image-search input").val();
+    window.open("https://duckduckgo.com/?t=h_&iax=images&ia=images&q=" + q);
+  });
 });
