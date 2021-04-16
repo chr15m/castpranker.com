@@ -26,4 +26,11 @@ $(document).ready(function() {
       document.execCommand($(this).data('command'), false, null);
     }
   });
+
+  $(document).on("click", "#editor img", function(ev) {
+    const range = new Range();
+    range.selectNode(ev.target);
+    document.getSelection().removeAllRanges();
+    document.getSelection().addRange(range);
+  });
 });
