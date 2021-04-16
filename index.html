@@ -11,12 +11,17 @@
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="main.js"></script>
-    <style>
-      /* body { max-width: 800px; width: 100%; margin: 1em auto; font-size: 2em; } */
-    </style>
+    <!--
+      * [x] find a better palette
+      * [ ] paste-image feedback spinner
+      * [ ] add dark mode
+      * [ ] test images
+      * add attribution / source link
+      * deploy
+    -->
   </head>
   <body>
-<div class="toolbar">
+<div class="toolbar ui">
   <a href="#" data-command='undo'><i class='fa fa-undo'></i></a>
   <a href="#" data-command='redo'><i class='fa fa-repeat'></i></a>
   <div class="fore-wrapper"><i class='fa fa-font' style='color:#C96;'></i>
@@ -39,7 +44,12 @@
   </div>
   <div id='editor' contenteditable>
     <h1>Cast Pranker</h1>
-    <p>Edit this text, paste images, and cast this page to prank your family!</p>
+    <p>Edit this text, paste images,<br/>and cast this page to prank your family!</p>
+  </div>
+  <div id="attribution" class="ui">
+    made with 🤖 by <a href="https://twitter.com/mccrmx">@mccrmx</a>.<br/>
+    based on a <a href="https://codepen.io/Shokeen/pen/pgryyN">codepen by Shokeen</a>.<br/>
+    palette by <a href="https://lospec.com/palette-list/minimal-red-3">Drag109</a>.
   </div>
   </body>
 </html>
