@@ -52,9 +52,17 @@ $(document).ready(function() {
   updateThemeState();
 
   /*** image search ***/
-  // https://duckduckgo.com/?q=hello&t=h_&iax=images&ia=images
-  $("#image-search button").click(function(ev) {
+
+  function search (ev) {
     const q = $("#image-search input").val();
     window.open("https://duckduckgo.com/?t=h_&iax=images&ia=images&q=" + q);
+  }
+
+  // https://duckduckgo.com/?q=hello&t=h_&iax=images&ia=images
+  $("#image-search button").click(search);
+  $("#image-search input").on("keyup", function(ev) {
+    if (ev.keyCode == 13) {
+      search();
+    }
   });
 });
